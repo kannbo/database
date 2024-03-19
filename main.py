@@ -1,13 +1,12 @@
 import streamlit as st,uuid
 #"""ここで読み込んだりしてください"""
-st.title("データベース")
 if len(st.session_state)==0:
   st.session_state["access"]=0
   st.session_state["data"]={}
   st.session_state["aikotoba"]={}
 def save():
   return #ここに何かプログラムを入れます
-st.write("""<h1>マルチデータベース</h1><h2>筆記法</h2>名前:値,名前:値...ノヨウナカタチデ記述します""",unsafe_allow_html=True)
+st.write("""<title>データベース</title><h1>マルチデータベース</h1><h2>筆記法</h2>名前:値,名前:値...ノヨウナカタチデ記述します""",unsafe_allow_html=True)
 st.header("作成")
 st.info('パスワードなどはメモをしてください')
 password=st.text_input("秘密パスワード(かきこみ)")
