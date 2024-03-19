@@ -1,6 +1,6 @@
 import streamlit as st,uuid
 #"""ここで読み込んだりしてください"""
-
+st.title("データベース")
 if len(st.session_state)==0:
   st.session_state["access"]=0
   st.session_state["data"]={}
