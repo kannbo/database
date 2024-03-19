@@ -18,7 +18,7 @@ if st.button("作成"):
   key_=str(uuid.uuid4())
   try:
     st.session_state["data"][key_]=[]
-    st.session_state["data"][key_+"password"]=password
+    st.session_state["data"][key_+"password"]=[password,password2]
     st.success(f"キー:{key_}")
   except:
     st.warning('何らかの問題')
@@ -36,7 +36,7 @@ if st.button("追加"):
       #for i in key_value["value"].split(","):
       #  dictss[i.split(":")[0]]=i.split(":")[1]
       dictss=[{aaa.split(":")[0]:aaa.split(":")[1]} for aaa in value_.split(",")]
-      if password_==st.session_state["data"][key__+"password"]:
+      if password_==st.session_state["data"][key__+"password"][0]:
         st.session_state["data"][key__].append(dictss)
         st.success('成功!')
       else:
