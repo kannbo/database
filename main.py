@@ -21,17 +21,17 @@ if st.button("作成"):
 st.header("追加")
 st.info('ここではパスワードなどが必須')
 key_value={"key":"","password":"","value":""}
-key_value["key"]=st.text_input("キー")
-key_value["password"]=st.text_input("パスワード")
-key_value["value"]=st.text_input("追加要素")
+key__=st.text_input("キー")
+password_=st.text_input("パスワード")
+value_=st.text_input("追加要素")
 dictss={}
 if st.button("追加"):
   try:
-    if key_value["key"] in st.session_state["data"]:
+    if key__ in st.session_state["data"]:
       #for i in key_value["value"].split(","):
       #  dictss[i.split(":")[0]]=i.split(":")[1]
-      dictss=[{aaa.split(":")[0]:aaa.split(":")[1]} for aaa in key_value["value"].split(",")]
-      st.session_state["data"][key_value["key"]].append(dictss)
+      dictss=[{aaa.split(":")[0]:aaa.split(":")[1]} for aaa in value_.split(",")]
+      st.session_state["data"][key__].append(dictss)
       st.success('成功!')
     else:
       st.warning('キーが存在しません')
