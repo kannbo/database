@@ -20,6 +20,8 @@ if st.button("作成"):
     st.session_state["data"][key_]=[]
     st.session_state["data"][key_+"password"]=[password,password2]
     st.success(f"キー:{key_}")
+    if aikotoba:
+      st.session_state["aikotoba"][password3]=[password2,key_]
   except:
     st.warning('何らかの問題')
   key_=""
@@ -45,3 +47,11 @@ if st.button("追加"):
       st.warning('キーが存在しません')
   except:
     st.warning('失敗!')
+st.header("復元")
+st.info('合言葉に登録されている必要があります')
+aikotoba2=st.text_input("合言葉")
+if st.button("復元"):
+  try:
+    st.write(st.session_state["aikotoba"][aikotoba2])
+  except:
+    st.text("ないよ！")
