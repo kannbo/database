@@ -1,6 +1,5 @@
 import streamlit as st,uuid
 """ここで読み込んだりしてください"""
-form multiapp import MaltiApp
 key_value={}
 if len(st.session_state)==0:
   st.session_state["access"]=0
