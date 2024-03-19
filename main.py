@@ -1,5 +1,5 @@
 import streamlit as st,uuid
-"""ここで読み込んだりしてください"""
+#"""ここで読み込んだりしてください"""
 key_value={}
 if len(st.session_state)==0:
   st.session_state["access"]=0
