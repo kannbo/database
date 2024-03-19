@@ -24,6 +24,7 @@ if st.button("作成"):
       st.session_state["aikotoba"][password3]=[password2,key_]
   except Exception as a:
     st.warning('何らかの問題')
+    raise ValueError(a)
     print(a)
   key_=""
 st.header("追加")
