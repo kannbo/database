@@ -20,6 +20,7 @@ if st.button("作成"):
   key_=""
 st.header("追加")
 st.info('ここではパスワードなどが必須')
+key_value={}
 key_value["key"]=st.text_input("キー")
 key_value["password"]=st.text_input("パスワード")
 key_value["value"]=st.text_input("追加要素")
