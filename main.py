@@ -57,3 +57,15 @@ if st.button("復元"):
     st.write(st.session_state["aikotoba"][aikotoba2])
   except:
     st.text("ないよ！")
+st.header("内容確認")
+st.info('パスワードが必要です')
+password___=st.text_input("パスワード(公開秘密両法OK)")
+key_id=st.text_input("キー     ")
+if st.button("実行"):
+  try:
+    if st.session_state["data"][key_id+"password"][0]==password___:
+      st.text(st.session_state["data"][key_id])
+    elif st.session_state["data"][key_id+"password"][1]==password___:
+      st.text(st.session_state["data"][key_id])
+  except:
+    st.warning('何かの問題')
