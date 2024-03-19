@@ -4,12 +4,16 @@ import streamlit as st,uuid
 if len(st.session_state)==0:
   st.session_state["access"]=0
   st.session_state["data"]={}
+  st.session_state["aikotoba"]={}
 def save():
   return #ここに何かプログラムを入れます
 st.write("""<h1>マルチデータベース</h1><h2>筆記法</h2>名前:値,名前:値...ノヨウナカタチデ記述します""",unsafe_allow_html=True)
 st.header("作成")
 st.info('パスワードなどはメモをしてください')
-password=st.text_input("パスワード")
+password=st.text_input("秘密パスワード(かきこみ)")
+password2=st.text_input("公開用パスワード")
+aikotoba=st.checkbox('あいことばをつかう')
+password3=st.text_input("あいことば")
 if st.button("作成"):
   key_=str(uuid.uuid4())
   try:
@@ -36,7 +40,7 @@ if st.button("追加"):
         st.session_state["data"][key__].append(dictss)
         st.success('成功!')
       else:
-        st.warning('謎のエラー')
+        st.warning('キーが存在しません')
     else:
       st.warning('キーが存在しません')
   except:
