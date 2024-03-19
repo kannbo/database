@@ -1,6 +1,6 @@
 import streamlit as st,uuid
 #"""ここで読み込んだりしてください"""
-key_value={}
+
 if len(st.session_state)==0:
   st.session_state["access"]=0
   st.session_state["data"]={}
@@ -22,7 +22,7 @@ st.header("追加")
 st.info('ここではパスワードなどが必須')
 key_value={"key":"","password":"","value":""}
 key__=st.text_input("キー")
-password_=st.text_input("パスワード")
+password_=st.text_input("パスワード  ")
 value_=st.text_input("追加要素")
 dictss={}
 if st.button("追加"):
