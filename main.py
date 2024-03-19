@@ -32,7 +32,7 @@ if st.button("追加"):
       #for i in key_value["value"].split(","):
       #  dictss[i.split(":")[0]]=i.split(":")[1]
       dictss=[{aaa.split(":")[0]:aaa.split(":")[1]} for aaa in value_.split(",")]
-      if password_==st.session_state["data"][password_+"password"]:
+      if password_==st.session_state["data"][key__+"password"]:
         st.session_state["data"][key__].append(dictss)
         st.success('成功!')
       else:
