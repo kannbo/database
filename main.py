@@ -4,6 +4,7 @@ if len(st.session_state)==0:
   st.session_state["access"]=0
   st.session_state["data"]={}
   st.session_state["aikotoba"]={}
+  st.balloons()
 def save():
   return #ここに何かプログラムを入れます
 st.write("""<title>データベース</title><h1>マルチデータベース</h1><h2>筆記法</h2>名前:値,名前:値...ノヨウナカタチデ記述します""",unsafe_allow_html=True)
